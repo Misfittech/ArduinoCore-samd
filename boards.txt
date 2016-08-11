@@ -1,0 +1,43 @@
+# Copyright (c) 2014-2015 Arduino LLC.  All right reserved.
+#
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# License as published by the Free Software Foundation; either
+# version 2.1 of the License, or (at your option) any later version.
+#
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public
+# License along with this library; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+
+nano_zero.name=Nano Zero (Native USB Port)
+nano_zero.vid.0=0x1209
+nano_zero.pid.0=0x8087
+nano_zero.vid.1=0x1209
+nano_zero.pid.1=0x8086
+nano_zero.upload.tool=bossac
+nano_zero.upload.protocol=sam-ba
+nano_zero.upload.maximum_size=262144
+nano_zero.upload.use_1200bps_touch=true
+nano_zero.upload.wait_for_upload_port=true
+nano_zero.upload.native_usb=true
+nano_zero.build.mcu=cortex-m0plus
+nano_zero.build.f_cpu=48000000L
+nano_zero.build.usb_product="Nano Zero"
+nano_zero.build.usb_manufacturer="MisfitTech.net"
+nano_zero.build.board=SAMD_NANO_ZERO
+nano_zero.build.core=arduino
+nano_zero.build.extra_flags=-DARDUINO_SAMD_ZERO -D__SAMD21G18A__ {build.usb_flags}
+nano_zero.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+nano_zero.build.openocdscript=openocd_scripts/arduino_zero.cfg
+nano_zero.build.variant=arduino_zero
+nano_zero.build.variant_system_lib=
+nano_zero.build.vid=0x1209
+nano_zero.build.pid=0x8087
+nano_zero.bootloader.tool=openocd
+nano_zero.bootloader.file=nano_zero/samd21_sam_ba.bin
