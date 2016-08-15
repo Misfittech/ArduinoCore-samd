@@ -86,11 +86,11 @@ ServiceBinary=%12%\%DRIVERFILENAME%.sys
 [SourceDisksFiles]
 [SourceDisksNames]
 [DeviceList]
-%DESCRIPTION%=DriverInstall, USB\VID_1209&PID_8086
+%DESCRIPTION_BOOT%=DriverInstall, USB\VID_1209&PID_8086
 %DESCRIPTION%=DriverInstall, USB\VID_1209&PID_8087&MI_00
 
 [DeviceList.NTamd64]
-%DESCRIPTION%=DriverInstall, USB\VID_1209&PID_8086
+%DESCRIPTION_BOOT%=DriverInstall, USB\VID_1209&PID_8086
 %DESCRIPTION%=DriverInstall, USB\VID_1209&PID_8087&MI_00
 
 ;------------------------------------------------------------------------------
@@ -101,7 +101,10 @@ ServiceBinary=%12%\%DRIVERFILENAME%.sys
 [Strings]
 MFGFILENAME="CDC_vista"
 DRIVERFILENAME ="usbser"
-MFGNAME="Adafruit Industries LLC"
-INSTDISK="Feather M0 Driver Installer"
-DESCRIPTION="Adafruit Feather M0"
+MFGNAME="MisfitTech.net"
+INSTDISK="Nano Driver Installer"
+DESCRIPTION="Nano Zero"
+DESCRIPTION_BOOT="Nano Zero Bootloader"
 SERVICE="USB RS-232 Emulation Driver"
+VID_1209&PID_8086.DeviceDesc="Nano Zero bootloader" 
+VID_1209&PID_8087.DeviceDesc="Nano Zero"
