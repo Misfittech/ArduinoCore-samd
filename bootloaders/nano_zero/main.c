@@ -28,6 +28,7 @@
 
 extern uint32_t __sketch_vectors_ptr; // Exported value from linker script
 extern void board_init(void);
+void pulse_led(int8_t speed);
 
 #if (defined DEBUG) && (DEBUG == 1)
 volatile uint32_t* pulSketch_Start_Address;
@@ -229,10 +230,12 @@ static int16_t pulse_pwm;
 void pulse_led(int8_t speed) {
   // blink D13
   pulse_tick++;
-  if (pulse_tick==BOOT_PULSE_MAX) {
+  if (pulse_tick==BOOT_PULSE_MAX) 
+  {
     pulse_tick = 0;
     pulse_pwm += pulse_dir * speed;
-    if (pulse_pwm > 255) {
+    if (pulse_pwm > 255) 
+	{
       pulse_pwm = 255;
       pulse_dir = -1;
     }
@@ -243,5 +246,7 @@ void pulse_led(int8_t speed) {
     LED_on();
   }
   if (pulse_tick==pulse_pwm) 
+  {
     LED_off();
+  }
 }

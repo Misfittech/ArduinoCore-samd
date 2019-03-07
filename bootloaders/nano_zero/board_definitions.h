@@ -60,8 +60,10 @@
 /*
  * LEDs definitions
  */
+
+
 #define BOARD_LED_PORT                    (0)
-#define BOARD_LED_PIN                     (17)
+#define BOARD_LED_PIN                     (17) // for USB resistor use 21 (17)
 
 #define BOARD_LEDRX_PORT                  (1)
 #define BOARD_LEDRX_PIN                   (3)

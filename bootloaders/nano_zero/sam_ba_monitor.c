@@ -28,6 +28,7 @@
 
 const char RomBOOT_Version[] = SAM_BA_VERSION;
 const char RomBOOT_ExtendedCapabilities[] = "[Arduino:XYZ]";
+const char DeviceID[]="000000";  
 
 /* Provides one common interface to handle both USART and USB-CDC */
 typedef struct
@@ -294,6 +295,12 @@ static void sam_ba_monitor_loop(void)
         }
         b_terminal_mode = 0;
       }
+	  
+	  else if (command == 'v')
+	  {
+		  ptr_monitor_if->putdata(DeviceID, strlen(DeviceID));
+		  ptr_monitor_if->putdata("\n\r", 2);
+	  }
       else if (command == 'V')
       {
         ptr_monitor_if->putdata("v", 1);

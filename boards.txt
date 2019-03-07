@@ -32,10 +32,10 @@ nano_zero.build.usb_product="Nano Zero"
 nano_zero.build.usb_manufacturer="MisfitTech.net"
 nano_zero.build.board=SAMD_NANO_ZERO
 nano_zero.build.core=arduino
-nano_zero.build.extra_flags=-DARDUINO_SAMD_ZERO -D__SAMD21G18A__ {build.usb_flags}
+nano_zero.build.extra_flags=-DARDUINO_SAMD_ZERO -D__SAMD21G18A__  -D BASE_FILE_NAME=\"$(<F)\" {build.usb_flags}
 nano_zero.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
 nano_zero.build.openocdscript=openocd_scripts/arduino_zero.cfg
-nano_zero.build.variant=arduino_zero
+nano_zero.build.variant=nano_zero
 nano_zero.build.variant_system_lib=
 nano_zero.build.vid=0x1209
 nano_zero.build.pid=0x8087
