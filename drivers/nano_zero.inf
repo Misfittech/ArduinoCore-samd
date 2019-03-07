@@ -88,10 +88,16 @@ ServiceBinary=%12%\%DRIVERFILENAME%.sys
 [DeviceList]
 %DESCRIPTION_BOOT%=DriverInstall, USB\VID_1209&PID_8086
 %DESCRIPTION%=DriverInstall, USB\VID_1209&PID_8087&MI_00
+%DESCRIPTION_SS_BOOT%=DriverInstall, USB\VID_3161&PID_0001
+%DESCRIPTION_51_BOOT%=DriverInstall, USB\VID_3161&PID_0002
+%DESCRIPTION_NZ_BOOT%=DriverInstall, USB\VID_3161&PID_0003
 
 [DeviceList.NTamd64]
 %DESCRIPTION_BOOT%=DriverInstall, USB\VID_1209&PID_8086
 %DESCRIPTION%=DriverInstall, USB\VID_1209&PID_8087&MI_00
+%DESCRIPTION_SS_BOOT%=DriverInstall, USB\VID_3161&PID_0001
+%DESCRIPTION_51_BOOT%=DriverInstall, USB\VID_3161&PID_0002
+%DESCRIPTION_NZ_BOOT%=DriverInstall, USB\VID_3161&PID_0003
 
 ;------------------------------------------------------------------------------
 ;  String Definitions
@@ -105,6 +111,9 @@ MFGNAME="MisfitTech.net"
 INSTDISK="Nano Driver Installer"
 DESCRIPTION="Nano Zero"
 DESCRIPTION_BOOT="Nano Zero Bootloader"
+DESCRIPTION_NZ_BOOT="Nano Zero Bootloader"
+DESCRIPTION_SS_BOOT="Smart Stepper Bootloader"
+DESCRIPTION_51_BOOT="Nano 51 Bootloader"
 SERVICE="USB RS-232 Emulation Driver"
 VID_1209&PID_8086.DeviceDesc="Nano Zero bootloader" 
 VID_1209&PID_8087.DeviceDesc="Nano Zero"
